@@ -26,7 +26,7 @@ The priority audience is developers who are building dashboard-like software. Th
 - Content:
   - [ ] Blur+fade placeholder (name TBD) (inspired by Luxe)
 - Particles:
-  - [ ] Stars popping ([inspired by](https://twitter.com/i/bookmarks/all?post_id=1716503550392697232))
+  - [ ] Stars popping ([inspired by](https://twitter.com/JohnPhamous/status/1716503550392697232))
 
 #### Landing pages
 

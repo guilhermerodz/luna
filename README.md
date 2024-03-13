@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Luna
 
-## Getting Started
+Customizable React visual effects components that you can copy and paste into your design system. Free. Open Source. Apply it on top of your design system.
 
-First, run the development server:
+### Roadmap
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### Dashboard-like software
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The priority audience is developers who are building dashboard-like software. The goal is to make it easy to apply visual effects to their software.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Border:
+  - [x] Tracing Border
+  - [ ] Top Light (inspired by Resend)
+- Background:
+  - [ ] Frosted Glass (might be unnecessary because backdrop-blur css is easy to use)
+- Overlay:
+  - [ ] Badge Reflection
+- Texture:
+  - ?
+- Animation:
+  - ?
+- Shadow:
+  - ?
+- Content:
+  - [ ] Blur+fade placeholder (name TBD) (inspired by Luxe)
+- Particles:
+  - [ ] Stars popping ([inspired by](https://twitter.com/i/bookmarks/all?post_id=1716503550392697232))
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Landing pages
 
-## Learn More
+Not the priority.
 
-To learn more about Next.js, take a look at the following resources:
+- Isolated lights:
+  - ?
+- Isometric view containers
+- Rotating cards
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### FAQ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Isn't this the same as Aceternity UI?**
 
-## Deploy on Vercel
+No. Aceternity's approach is more imperative. It provide examples on how to build the VFX from scratch or which libraries to use.
+It might take several minutes or an hour for a developer to understand what's happening under the hood, even with a code example.
+Luna's goal is to provide you production-ready VFX, which can be added as a layer to your design system in less than a minute.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**How to use with my existing Design System?**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You might already be using a UI library or design system. Everyone does.
+Luna's CLI act like shadcn-ui does. It will copy-paste VFX components into your project. You can then simply import them inside of your primitives, such as `components/Button,Input,Card`, etc.
+
+**Are the components fully customizable?**
+
+Yes. I've setup CSS variables on top of each CSS file so you can easily change the colors, durations, or tokens in general. You can also change all of the HTML & CSS structure.
+
+### References
+
+- [Resend](https://resend.com)
+- [JohnPhamous](https://twitter.com/JohnPhamous)
+- [Luxe](https://luxe.guhrodrigues.com)

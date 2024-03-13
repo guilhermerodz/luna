@@ -1,0 +1,45 @@
+.c {
+  /* Customize the variables as you wish */
+  --border-width: 1px;
+  --background: conic-gradient(from 0deg, white, gray, transparent, transparent, transparent);
+
+  border-radius: inherit;
+
+  position: absolute;
+  padding: var(--border-width);
+
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+.b {
+  border-radius: inherit;
+
+  position: absolute;
+  inset: calc(-1 * var(--border-width));
+  padding: var(--border-width);
+
+  -webkit-mask: linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.b::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 200%;
+  min-height: 200%;
+  aspect-ratio: 1/1;
+  background: var(--background);
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}

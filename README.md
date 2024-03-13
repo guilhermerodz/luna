@@ -2,6 +2,8 @@
 
 Customizable React visual effects components that you can copy and paste into your design system. Free. Open Source. Apply it on top of your design system.
 
+![luna--og](https://github.com/guilhermerodz/luna/assets/10366880/f1a5e69e-a9b4-4c34-b57e-bc40f7d284f9)
+
 ### Roadmap
 
 #### Dashboard-like software

@@ -1,0 +1,6 @@
+/* This selector has specificity:0, meaning it won't override declared position
+   unless the element has it undeclared.
+   A declared position:static or position:unset statement would also break it. */
+:where(.position-non-static) {
+  position: relative;
+}

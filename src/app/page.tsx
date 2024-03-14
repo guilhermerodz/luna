@@ -1,9 +1,6 @@
-import * as React from 'react'
-
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { TracingBorder } from './library/components/tracing-border'
-import { TracingBorderJS } from './library/js-components'
+import { TracingBorder } from '../vfx/components/tracing-border'
 
 export default async function IndexPage() {
   return (
@@ -13,20 +10,9 @@ export default async function IndexPage() {
         'min-h-[100dvh]',
       )}
     >
-      {/* position:relative */}
-      <Button variant="outline" className="relative">
-        Test
-        
-        <TracingBorder />
-      </Button>
+      <Button variant="outline" shiny>Test</Button>
     </div>
   )
 }
 
 export const revalidate = 3600
-
-// with JS (hydration delay)
-// <Button variant="outline">
-//   Test
-//   <TracingBorderJS />
-// </Button>

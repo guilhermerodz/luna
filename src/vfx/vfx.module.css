@@ -1,0 +1,3 @@
+:where(.position-non-static) {
+  position: relative;
+}

@@ -40,7 +40,7 @@ export function VFXSlot({
       return child
     }
 
-    const isVoid = ALL_VOID_ELEMENTS.includes(child.type as string)
+    const isVoid = VOID_ELEMENTS.has(child.type as string)
 
     // TODO: add support for void elements (automatically create a div or span around it)
     if (isVoid) {
@@ -92,7 +92,8 @@ export function VFXSlot({
  * Thanks to my friend Igor Bedesqui for showing me the void specs.
  * @see https://html.spec.whatwg.org/multipage/syntax.html#void-elements
  */
-const VOID_ELEMENTS = [
+const VOID_ELEMENTS = new Set([
+  // HTML spec for void elements
   'area',
   'base',
   'br',
@@ -106,11 +107,11 @@ const VOID_ELEMENTS = [
   'source',
   'track',
   'wbr',
-]
-const MANUALLY_ADDED_ELEMENTS_THAT_BEHAVE_LIKE_VOID = ['video']
-const ALL_VOID_ELEMENTS = VOID_ELEMENTS.concat(
-  MANUALLY_ADDED_ELEMENTS_THAT_BEHAVE_LIKE_VOID,
-)
+  // HTML deprecated
+  'param',
+  // Manually added elements that behave like void elements
+  'video',
+])
 
 function logOrThrow(message: string) {
   console.error(message)

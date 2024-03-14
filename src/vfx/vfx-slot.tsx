@@ -22,7 +22,7 @@ type VFXSlotProps = {
  * @param {React.ReactElement} appendChild The VFX to append to the children of the child.
  * @param {string} className The class name to append to the children apart from the internal base class name.
  * @param {boolean} active Whether the VFX is active or not. Default: `true`.
- * @returns 
+ * @returns
  */
 export function VFXSlot({
   className,
@@ -108,6 +108,7 @@ const VOID_ELEMENTS = [
   'source',
   'track',
   'wbr',
+  'param'
 ]
 const MANUALLY_ADDED_ELEMENTS_THAT_BEHAVE_LIKE_VOID = ['video']
 const ALL_VOID_ELEMENTS = VOID_ELEMENTS.concat(

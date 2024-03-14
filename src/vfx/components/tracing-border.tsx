@@ -15,7 +15,7 @@ export const TracingBorder = React.forwardRef<
   return (
     <VFXSlot
       active={active}
-      appendChild={
+      vfxChild={
         <VFXWrapper ref={ref} className={s.c}>
           <div className={s.b} />
         </VFXWrapper>

@@ -7,7 +7,7 @@ const BASE_CLASSNAME = s['position-non-static']
 
 type VFXSlotProps = {
   children: React.ReactElement
-  appendChild?: React.ReactElement
+  vfxChild?: React.ReactElement
   className?: string
   active?: boolean
 }
@@ -16,18 +16,17 @@ type VFXSlotProps = {
  * This Slot is the building block of any VFX:
  * 1. Renders effects only if `active` is true. Default: true.
  * 2. Forces the single child element to have a non-static CSS position.
- * 3. Append a single child to the children of the children. This is usually a VFX effect.
- * It's also a flagger for when the VFX is active or inactive.
+ * 3. Append a single child to the children of the children. This is usually a VFX component.
  * @param {React.ReactElement} children The child to wrap (doesn't support void elements)
- * @param {React.ReactElement} appendChild The VFX to append to the children of the child.
+ * @param {React.ReactElement} vfxChild The VFX to append to the children of the child.
  * @param {string} className The class name to append to the children apart from the internal base class name.
  * @param {boolean} active Whether the VFX is active or not. Default: `true`.
- * @returns 
+ * @returns
  */
 export function VFXSlot({
   className,
   children: child,
-  appendChild,
+  vfxChild: vfxChild,
   active = true,
 }: VFXSlotProps) {
   const newChild = React.useMemo(() => {
@@ -56,9 +55,9 @@ export function VFXSlot({
     }
 
     let cc = child.props.children
-    if (cc !== undefined && appendChild) {
+    if (cc !== undefined && vfxChild) {
       if (!Array.isArray(cc)) {
-        const arr = React.Children.toArray(cc).map((item, index) => {
+        cc = React.Children.toArray(cc).map((item, index) => {
           if (
             !React.isValidElement(item)
             // typeof item === 'string' ||
@@ -71,9 +70,8 @@ export function VFXSlot({
             key: index,
           })
         })
-        cc = arr
       }
-      cc.push(appendChild)
+      cc.push(vfxChild)
     }
 
     return React.cloneElement(child, {
@@ -85,7 +83,7 @@ export function VFXSlot({
         ' ' +
         (child.props.className || ''),
     })
-  }, [active, appendChild, child, className])
+  }, [active, vfxChild, child, className])
 
   return newChild
 }

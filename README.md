@@ -2,7 +2,7 @@
 
 Customizable React visual effects components that you can copy and paste into your design system. Free. Open Source. Apply it on top of your design system.
 
-![luna--og (2)](https://github.com/guilhermerodz/luna/assets/10366880/b2924bf3-c5b4-4b52-89ca-36c0173cbfe3)
+![luna--og](https://github.com/guilhermerodz/luna/assets/10366880/b2924bf3-c5b4-4b52-89ca-36c0173cbfe3)
 
 ### Roadmap
 
@@ -10,32 +10,33 @@ Customizable React visual effects components that you can copy and paste into yo
 
 The priority audience is developers who are building dashboard-like software. The goal is to make it easy to apply visual effects to their software.
 
-- Border:
-  - [x] Tracing Border
-  - [ ] Top Light (inspired by Resend)
-- Background:
-  - [ ] Frosted Glass (might be unnecessary because backdrop-blur css is easy to use)
-- Overlay:
-  - [ ] Badge Reflection
-- Texture:
-  - ?
-- Animation:
-  - ?
+- Wrapper/child:
+  - Border:
+    - [x] Tracing Border
+    - [ ] Top Light ([inspired by Resend](https://share.cleanshot.com/VJlQMPjt))
+  - Background:
+    - [ ] Frosted Glass (might be unnecessary because backdrop-blur css is easy to use)
+  - Overlay:
+    - [ ] Badge Reflection ([inspired by Luxe](https://share.cleanshot.com/xq6xstxQ))
+  - Texture:
+    - ?
+- Motion:
+  - Particles:
+    - [ ] Stars popping ([inspired by](https://twitter.com/JohnPhamous/status/1716503550392697232))
 - Shadow:
   - ?
-- Content:
-  - [ ] Blur+fade placeholder (name TBD) (inspired by Luxe)
-- Particles:
-  - [ ] Stars popping ([inspired by](https://twitter.com/JohnPhamous/status/1716503550392697232))
+- Misc:
+  - [ ] Blur+fade placeholder (name TBD) ([inspired by Luxe](https://share.cleanshot.com/Ryfy5qhX))
+
 
 #### Landing pages
 
 Not the priority.
 
 - Isolated lights:
-  - ?
-- Isometric view containers
-- Rotating cards
+  - Spotlight ([inspired by Resend](https://share.cleanshot.com/52tRV3LS))
+- Isometric view containers ([inspired by rauno.me](https://share.cleanshot.com/XSXhQGP9))
+- Tilting 3D cards ([inspired by Linear](https://linear.app/customers))
 
 ### FAQ
 

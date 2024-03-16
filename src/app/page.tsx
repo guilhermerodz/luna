@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { TracingBorder } from '../vfx/components/tracing-border'
 
 export default async function IndexPage() {
   return (
@@ -10,7 +9,9 @@ export default async function IndexPage() {
         'min-h-[100dvh]',
       )}
     >
-      <Button variant="outline" shiny>Test</Button>
+      <Button variant="outline" shiny>
+        Test
+      </Button>
     </div>
   )
 }

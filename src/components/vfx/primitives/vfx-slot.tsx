@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import s from './vfx-slot.module.css'
+import s from '../vfx.module.css'
 
 // Ensure that the child has a non-static position
 const BASE_CLASSNAME = s['position-non-static']
@@ -36,7 +36,7 @@ export function VFXSlot({
       typeof child === 'boolean' ||
       Array.isArray(child)
     ) {
-      logOrThrow("NonStaticSlot's child must be a single React element")
+      logOrThrow("VFXSlot's child must be a single React element")
       return child
     }
 
@@ -45,7 +45,7 @@ export function VFXSlot({
     // TODO: add support for void elements (automatically create a div or span around it)
     if (isVoid) {
       logOrThrow(
-        `VFXSlot cannot wrap a void element. Got element type: ${child.type}. Try wrapping your ${child.type} around a <div> or <span>. Please wrap your element if it is: ${ALL_VOID_ELEMENTS}.`,
+        `VFXSlot cannot wrap a void element. Got element type: ${child.type}. Try wrapping your ${child.type} around a <div> or <span>. Please wrap your element if it is: ${VOID_ELEMENTS}.`,
       )
       return child
     }
@@ -82,6 +82,7 @@ export function VFXSlot({
         (className || '') +
         ' ' +
         (child.props.className || ''),
+      // style: Object.assign({}, child.props.style, lunaStyle),
     })
   }, [active, vfxChild, child, className])
 

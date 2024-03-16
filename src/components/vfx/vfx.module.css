@@ -1,0 +1,43 @@
+:where(.vfx) {
+  --vfx-color-background: theme(colors.background);
+  --vfx-color-foreground: theme(colors.foreground);
+
+  --vfx-color-card: theme(colors.card.DEFAULT);
+  --vfx-color-card-foreground: theme(colors.card.foreground);
+
+  --vfx-color-popover: theme(colors.popover.DEFAULT);
+  --vfx-color-popover-foreground: theme(colors.popover.foreground);
+
+  --vfx-color-primary: theme(colors.primary.DEFAULT);
+  --vfx-color-primary-foreground: theme(colors.primary.foreground);
+
+  --vfx-color-secondary: theme(colors.secondary.DEFAULT);
+  --vfx-color-secondary-foreground: theme(colors.secondary.foreground);
+
+  --vfx-color-muted: theme(colors.muted.DEFAULT);
+  --vfx-color-muted-foreground: theme(colors.muted.foreground);
+
+  --vfx-color-accent: theme(colors.accent.DEFAULT);
+  --vfx-color-accent-foreground: theme(colors.accent.foreground);
+
+  --vfx-color-destructive: theme(colors.destructive.DEFAULT);
+  --vfx-color-destructive-foreground: theme(colors.destructive.foreground);
+
+  --vfx-color-border: theme(colors.border);
+  --vfx-color-input: theme(colors.input);
+  --vfx-color-ring: theme(colors.ring);
+}
+
+/* :where selector has specificity:0, meaning it won't override declared position
+   unless the element has it undeclared.
+   A declared position:static or position:unset statement would also break it. */
+:where(.position-non-static) {
+  position: relative;
+}
+
+:where(.vfx-wrapper) {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+}

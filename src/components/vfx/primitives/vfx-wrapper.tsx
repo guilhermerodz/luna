@@ -1,4 +1,7 @@
 import * as React from 'react'
+import clsx from 'clsx'
+
+import s from '../vfx.module.css'
 
 /**
  * This wrapper is a base for creating visual effects.
@@ -10,19 +13,7 @@ import * as React from 'react'
 export const VFXWrapper = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<'div'>
->((props, ref) => {
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        inset: 0,
-        pointerEvents: 'none',
-        userSelect: 'none',
-      }}
-      aria-hidden
-      {...props}
-      ref={ref}
-    />
-  )
+>(({ className, ...props }, ref) => {
+  return <div aria-hidden {...props} className={clsx(className, s.vfx, s.w)} ref={ref} />
 })
 VFXWrapper.displayName = 'VFXWrapper'

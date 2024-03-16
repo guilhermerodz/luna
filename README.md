@@ -12,7 +12,7 @@ The priority audience is developers who are building dashboard-like software. Th
 
 - Wrapper/child:
   - Border:
-    - [x] Tracing Border
+    - [x] Tracing Border ([inspired by Nusu+Oguz](https://github.com/nusu/react-glowing-button?tab=readme-ov-file))
     - [ ] Top Light ([inspired by Resend](https://share.cleanshot.com/VJlQMPjt))
   - Background:
     - [ ] Frosted Glass (might be unnecessary because backdrop-blur css is easy to use)

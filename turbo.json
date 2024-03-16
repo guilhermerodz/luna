@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["NODE_ENV"],
+  "pipeline": {
+    "build": {},
+    "clean": {},
+    "dev": {},
+    "test": {},
+    "typecheck": {},
+    "lint": {},
+    "format": {}
+  }
+}

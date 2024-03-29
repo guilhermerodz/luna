@@ -7,8 +7,8 @@
     theme('colors.muted.foreground'), */
     /* white,
     gray, */
-    var(--vfx-color-primary),
-    var(--vfx-color-foreground),
+    var(--vfx-color-light),
+    var(--vfx-color-shadow),
     transparent,
     transparent,
     transparent

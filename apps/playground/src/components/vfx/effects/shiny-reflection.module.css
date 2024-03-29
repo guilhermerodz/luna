@@ -1,0 +1,44 @@
+/* TODO: refine aesthetics and keyframes */
+
+/* Customize the variables as you wish */
+:where(.c) {
+  --vfx-background: linear-gradient(
+    110deg,
+    transparent 40%,
+    var(--vfx-color-light) 50%,
+    transparent 60%
+  );
+  --vfx-background-size: 200% 100%;
+
+  --vfx-animation: shine 2s linear infinite;
+}
+
+/* Implementation */
+:where(.c) {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+}
+
+:where(.b) {
+  border-radius: inherit;
+
+  position: absolute;
+  inset: 0;
+  border: inherit;
+  border-color: transparent;
+
+  opacity: .1;
+
+  background: var(--vfx-background);
+  background-size: var(--vfx-background-size);
+  animation: var(--vfx-animation);
+}
+@keyframes shine {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

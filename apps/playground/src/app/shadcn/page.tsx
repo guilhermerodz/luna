@@ -9,11 +9,9 @@ export default async function IndexPage() {
         'min-h-[100dvh]',
       )}
     >
-      <Button variant="outline" shiny>
+      <Button variant="outline">
         Test
       </Button>
     </div>
   )
 }
-
-export const revalidate = 3600

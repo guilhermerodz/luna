@@ -1,9 +1,35 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-	"files": { "ignoreUnknown": false, "ignore": [] },
-	"formatter": { "enabled": true, "indentStyle": "tab" },
-	"organizeImports": { "enabled": true },
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"ignore": []
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "space",
+		"indentWidth": 2,
+		"lineWidth": 100,
+		"ignore": [
+			"node_modules",
+			".next",
+			"dist",
+			".turbo"
+		]
+	},
+	"organizeImports": {
+		"enabled": true,
+		"ignore": [
+			"node_modules",
+			".next",
+			"dist",
+			".turbo"
+		]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -22,10 +48,31 @@
 				"useHookAtTopLevel": "error",
 				"useJsxKeyInIterable": "error"
 			},
-			"security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
-			"suspicious": { "noCommentText": "error", "noDuplicateJsxProps": "error" }
+			"security": {
+				"noDangerouslySetInnerHtmlWithChildren": "error"
+			},
+			"suspicious": {
+				"noCommentText": "error",
+				"noDuplicateJsxProps": "error"
+			}
+		},
+		"ignore": [
+			"node_modules",
+			".next",
+			"dist",
+			".turbo"
+		]
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
 		}
 	},
-	"javascript": { "formatter": { "quoteStyle": "double" } },
-	"overrides": [{ "include": ["**/*.ts?(x)"] }]
+	"overrides": [
+		{
+			"include": [
+				"**/*.ts?(x)"
+			]
+		}
+	]
 }

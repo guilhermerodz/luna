@@ -1,0 +1,31 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+	"files": { "ignoreUnknown": false, "ignore": [] },
+	"formatter": { "enabled": true, "indentStyle": "tab" },
+	"organizeImports": { "enabled": true },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false,
+			"a11y": {
+				"noAriaUnsupportedElements": "warn",
+				"noBlankTarget": "off",
+				"useAltText": "warn",
+				"useAriaPropsForRole": "warn",
+				"useValidAriaProps": "warn",
+				"useValidAriaValues": "warn"
+			},
+			"correctness": {
+				"noChildrenProp": "error",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error",
+				"useJsxKeyInIterable": "error"
+			},
+			"security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
+			"suspicious": { "noCommentText": "error", "noDuplicateJsxProps": "error" }
+		}
+	},
+	"javascript": { "formatter": { "quoteStyle": "double" } },
+	"overrides": [{ "include": ["**/*.ts?(x)"] }]
+}

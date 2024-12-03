@@ -27,7 +27,9 @@
     "test": "turbo run test --filter=*",
     "typecheck": "turbo run typecheck --filter=*",
     "lint": "turbo run lint --filter=*",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "format-and-lint": "biome check .",
+    "format-and-lint:fix": "biome check . --write"
   },
   "prettier": {
     "tabWidth": 2,

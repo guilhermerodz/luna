@@ -13,7 +13,8 @@
 		"enabled": true,
 		"indentStyle": "space",
 		"indentWidth": 2,
-		"lineWidth": 100,
+		"lineWidth": 80,
+
 		"ignore": [
 			"node_modules",
 			".next",
@@ -65,7 +66,10 @@
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "double"
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "asNeeded",
+			"lineEnding": "lf"
 		}
 	},
 	"overrides": [

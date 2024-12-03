@@ -27,19 +27,8 @@
     "test": "turbo run test --filter=*",
     "typecheck": "turbo run typecheck --filter=*",
     "lint": "turbo run lint --filter=*",
-    "format": "prettier --write .",
     "format-and-lint": "biome check .",
     "format-and-lint:fix": "biome check . --write"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "printWidth": 80,
-    "useTabs": false,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "arrowParens": "avoid",
-    "endOfLine": "lf"
   },
   "trustedDependencies": [
     "npm-run-all"
@@ -47,14 +36,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@playwright/test": "^1.41.2",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
     "turbo": "^1.12.5",

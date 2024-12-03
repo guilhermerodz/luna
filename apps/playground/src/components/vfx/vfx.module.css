@@ -1,7 +1,7 @@
 :where(.vfx) {
-  --vfx-shadcn-color-light: theme(colors.primary.DEFAULT);
-  --vfx-shadcn-color-shadow: theme(colors.foreground);
-  --vfx-shadcn-color-accent: theme(colors.accent.DEFAULT);
+  --vfx-shadcn-color-light: theme("colors.primary.DEFAULT");
+  --vfx-shadcn-color-shadow: theme("colors.foreground");
+  --vfx-shadcn-color-accent: theme("colors.accent.DEFAULT");
 
   --vfx-chakra-color-light: var(--chakra-colors-black);
   --vfx-chakra-color-shadow: var(--chakra-colors-white);

@@ -1,0 +1,26 @@
+/* Customize the variables as you wish */
+:where(.f) {
+  --min-fade-px: 50px;
+  --fade-slice: max(10%, var(--min-fade-px));
+}
+
+/* Implementation */
+:where(.f) {
+  width: 100%;
+  height: 100%;
+  mask-size: 100% 120%;
+  transition: mask-size .7s ease-out;
+}
+
+:where(.up) {
+  mask-image: linear-gradient(to top, black calc(100% - var(--fade-slice)), transparent);
+  mask-size: 100% 100%;
+}
+
+:where(.down) {
+  mask-image: linear-gradient(to bottom, black calc(100% - var(--fade-slice)), transparent);
+  mask-size: 100% 100%;
+}
+:where(.up.down) {
+  mask-image: linear-gradient(to bottom, transparent, black var(--fade-slice), black calc(100% - var(--fade-slice)), transparent);
+}

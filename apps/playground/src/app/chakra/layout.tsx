@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 import { cn } from '@/lib/utils'
 
 import '../globals.css'
-import { Providers } from './provider'
 import { ColorModeScript } from '@chakra-ui/react'
+import { Providers } from './provider'
 import { theme } from './theme'
 
 const inter = Inter({ subsets: ['latin'] })

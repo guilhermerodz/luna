@@ -21,9 +21,7 @@
     "url": "https://github.com/guilhermerodz/luna.git",
     "directory": "packages/cli"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "keywords": [
     "vfx",
     "react",

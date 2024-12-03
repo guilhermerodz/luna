@@ -30,9 +30,7 @@
     "format-and-lint": "biome check .",
     "format-and-lint:fix": "biome check . --write"
   },
-  "trustedDependencies": [
-    "npm-run-all"
-  ],
+  "trustedDependencies": ["npm-run-all"],
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@playwright/test": "^1.41.2",

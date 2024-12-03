@@ -1,5 +1,5 @@
-import * as React from 'react'
 import clsx from 'clsx'
+import * as React from 'react'
 
 import s from '../vfx.module.css'
 
@@ -14,6 +14,13 @@ export const VFXWrapper = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<'div'>
 >(({ className, ...props }, ref) => {
-  return <div aria-hidden {...props} className={clsx(className, s.vfx, s.w)} ref={ref} />
+  return (
+    <div
+      aria-hidden
+      {...props}
+      className={clsx(className, s.vfx, s.w)}
+      ref={ref}
+    />
+  )
 })
 VFXWrapper.displayName = 'VFXWrapper'

@@ -9,9 +9,7 @@ export default async function IndexPage() {
         'min-h-[100dvh]',
       )}
     >
-      <Button variant="outline">
-        Test
-      </Button>
+      <Button variant="outline">Test</Button>
     </div>
   )
 }

@@ -13,14 +13,28 @@
 }
 
 :where(.up) {
-  mask-image: linear-gradient(to top, black calc(100% - var(--fade-slice)), transparent);
+  mask-image: linear-gradient(
+    to top,
+    black calc(100% - var(--fade-slice)),
+    transparent
+  );
   mask-size: 100% 100%;
 }
 
 :where(.down) {
-  mask-image: linear-gradient(to bottom, black calc(100% - var(--fade-slice)), transparent);
+  mask-image: linear-gradient(
+    to bottom,
+    black calc(100% - var(--fade-slice)),
+    transparent
+  );
   mask-size: 100% 100%;
 }
 :where(.up.down) {
-  mask-image: linear-gradient(to bottom, transparent, black var(--fade-slice), black calc(100% - var(--fade-slice)), transparent);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black var(--fade-slice),
+    black calc(100% - var(--fade-slice)),
+    transparent
+  );
 }

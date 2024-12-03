@@ -28,7 +28,7 @@
   border: inherit;
   border-color: transparent;
 
-  opacity: .1;
+  opacity: 0.1;
 
   background: var(--vfx-background);
   background-size: var(--vfx-background-size);

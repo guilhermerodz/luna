@@ -42,13 +42,13 @@
   mask-composite: exclude;
 }
 :where(.b)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 200%;
   min-height: 200%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   background: var(--vfx-background);
   transform: translate(-50%, -50%) rotate(0deg);
   animation: var(--vfx-animation);

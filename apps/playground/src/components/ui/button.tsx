@@ -2,8 +2,10 @@ import { Slot } from '@radix-ui/react-slot'
 import { type VariantProps, cva } from 'class-variance-authority'
 import * as React from 'react'
 
-import { TracingBorder } from '@/components/vfx/effects/tracing-border'
 import { cn } from '@/lib/utils'
+
+import { TracingBorder } from '@/components/vfx/effects/tracing-border'
+import { ShinyReflection } from '../vfx/effects/shiny-reflection'
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
@@ -37,19 +39,28 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
+  beam?: boolean
   shiny?: boolean
   asChild?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant, size, shiny = false, asChild = false, ...props },
+    {
+      className,
+      variant,
+      size,
+      beam = false,
+      shiny = false,
+      asChild = false,
+      ...props
+    },
     ref,
   ) => {
     const Comp = asChild ? Slot : 'button'
     return (
-      <TracingBorder active={shiny}>
+      <TracingBorder active={beam}>
         <Comp
           className={cn(buttonVariants({ variant, size, className }))}
           ref={ref}

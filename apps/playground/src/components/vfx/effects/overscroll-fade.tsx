@@ -14,15 +14,20 @@ interface OverscrollFadeProps {
   //  * The amount of scrolled pixels required to trigger the fading on top and bottom
   //  * @default 0
   //  */
-  // TODO: threshold?: number;
+  threshold?: number;
 }
 
 export const OverscrollFade = React.forwardRef<
   React.ElementRef<typeof VFXWrapper>,
   OverscrollFadeProps
->(({ children, className, ...props }, ref) => {
+>(({ children, className, threshold = 0, ...props }, ref) => {
   const divRef = React.useRef<HTMLDivElement>(null)
 
+  // const lastTransitionClassName = React.useReducer(reducer, '')
+  const [lastTransitionClassName, setLastTransitionClassName] = React.useState('')
+
+  const prevScrollUp = React.useRef(false)
+  const prevScrollDown = React.useRef(false)
   const [canScrollUp, setCanScrollUp] = React.useState(false)
   const [canScrollDown, setCanScrollDown] = React.useState(false)
 
@@ -33,18 +38,22 @@ export const OverscrollFade = React.forwardRef<
     }
 
     function onScroll() {
-      const canScroll = div.scrollHeight > div.clientHeight
-      const canScrollUp = div.scrollTop > 0
-      const canScrollDown = div.scrollTop + div.clientHeight < div.scrollHeight
+      const _canScroll = div.scrollHeight > div.clientHeight
+      const _canScrollUp = div.scrollTop > (0 + threshold)
+      const _canScrollDown = div.scrollTop - threshold + div.clientHeight < div.scrollHeight
 
-      if (!canScroll) {
+      if (!_canScroll) {
         return
       }
 
-      console.log({ canScrollUp, canScrollDown })
-
-      setCanScrollUp(canScrollUp)
-      setCanScrollDown(canScrollDown)
+      setCanScrollUp(prev => {
+        prevScrollUp.current = prev
+        return _canScrollUp
+      })
+      setCanScrollDown(prev => {
+        prevScrollDown.current = prev
+        return _canScrollDown
+      })
     }
 
     div.addEventListener('scroll', onScroll)
